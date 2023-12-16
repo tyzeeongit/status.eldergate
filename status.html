@@ -1,1 +1,47 @@
 
+Bien sûr, voici un exemple de code HTML et CSS qui pourrait répondre à vos besoins. Notez que vous devrez remplacer `"logo.png"` par le chemin de votre logo et définir les variables JavaScript en conséquence.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        .status { width: 100%; padding: 20px; color: white; }
+        .operational { background: green; }
+        .maintenance { background: orange; }
+        .off { background: red; }
+        img { position: absolute; top: 20px; right: 20px; width: 50px; height: 50px; }
+    </style>
+    <script>
+        var pannel = "off"; // Change this value to "operational", "maintenance", or "off"
+        var discord = "operational"; // Change this value to "operational", "maintenance", or "off"
+        var staff = "maintenance"; // Change this value to "operational", "maintenance", or "off"
+        var plugins = "operational"; // Change this value to "operational", "maintenance", or "off"
+        var assets = "off"; // Change this value to "operational", "maintenance", or "off"
+    </script>
+</head>
+<body>
+    <img src="logo.png" alt="Logo">
+    <div id="pannel" class="status"></div>
+    <div id="discord" class="status"></div>
+    <div id="staff" class="status"></div>
+    <div id="plugins" class="status"></div>
+    <div id="assets" class="status"></div>
+    <script>
+        document.getElementById("pannel").className += " " + pannel;
+        document.getElementById("pannel").innerHTML = "Pannel status: " + pannel;
+        document.getElementById("discord").className += " " + discord;
+        document.getElementById("discord").innerHTML = "Discord status: " + discord;
+        document.getElementById("staff").className += " " + staff;
+        document.getElementById("staff").innerHTML = "Staff status: " + staff;
+        document.getElementById("plugins").className += " " + plugins;
+        document.getElementById("plugins").innerHTML = "Plugins status: " + plugins;
+        document.getElementById("assets").className += " " + assets;
+        document.getElementById("assets").innerHTML = "Assets status: " + assets;
+    </script>
+</body>
+</html>
+```
+
+Ce code crée une page avec le logo en haut à droite et affiche le statut de chaque élément (panneau, discord, personnel, plugins, assets
